@@ -1,0 +1,37 @@
+body {
+  font-family:      Verdana, Geneva, Arial, sans-serif;
+  font-size:        medium;
+}
+
+.paragraph{
+  position: absolute;
+  width: 18rem;
+  background: #EAEAEA;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px #bbb;
+  box-sizing: border-box;
+  padding: 2rem; }
+
+select {
+	width: 200px;
+	height: 60px%;
+	border: solid 1px rosybrown;
+	position: absolute;
+}
+.box{
+  position: absolute;
+  margin-left: 25rem;
+  background:#EAEAEA;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px #bbb;
+  box-sizing: border-box;
+  padding: 5rem; }
+  
+.juzhong{
+  position: absolute;
+  margin-left: 10rem;
+  background:#EAEAEA;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px #bbb;
+  box-sizing: border-box;
+  padding: 5rem; }
