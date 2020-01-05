@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="paragraph">
+<a href="/entry"><button style="letter-spacing:2px;background-color:#6495ED;color:white;size:35%;">首页</button></a> </br></br>
+<a href="/density"><button style="letter-spacing:2px;background-color:#6495ED;color:white;size:35%;">人口密度</button></a> </br></br>
+<a href="/consumption"><button style="letter-spacing:2px;background-color:#6495ED;color:white;size:35%;">平均工资与人均消费支出</button></a> </br></br>
+<a href="/house_prices"><button style="letter-spacing:2px;background-color:#6495ED;color:white;size:35%;">住宅商品房平均房价</button></a> </br></br>
+<a href="/unemployment"><button style="letter-spacing:2px;background-color:#6495ED;color:white;size:35%;">失业率</button></a> </br></br>
+</div>
+
+<div2 class="box">
+<h2>{{ the_title }}</h2>
+</br>
+{{ the_plot_all|safe }}
+<p style="text-indent:2em;">失业率和就业率存在反比关系，失业低则意味着就业率高，同时也意味着就业竞争压力小。在国家积极的就业政策背景下，
+</br>近5年来大多数城市的失业率稳中有降，但仍有些城市的失业率始终在上升或者失业率始终维持在较高水平。例如成都近5年
+</br>的失业率一直在上升；哈尔滨的失业率始终保持一年升一年降的趋势，但变化起伏不大，近5年来失业率始终保持在36个主要
+</br>城市中的前5名。并且东北以及靠近东北的北方地区的失业率大多数都非常高，近5年的失业率基本都高于36个城市的平均失
+</br>业率。而近5年失业率始终保持较低水平且无明显上升趋势的城市主要有南京、杭州、宁波、海口以及除深圳外的一线城市等。</p>
+</br>
+{{ the_res|safe }}
+</div2>
+{% endblock %}

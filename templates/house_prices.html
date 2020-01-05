@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="paragraph">
+<a href="/entry"><button style="letter-spacing:2px;background-color:#6495ED;color:white;size:35%;">首页</button></a> </br></br>
+<a href="/density"><button style="letter-spacing:2px;background-color:#6495ED;color:white;size:35%;">人口密度</button></a> </br></br>
+<a href="/consumption"><button style="letter-spacing:2px;background-color:#6495ED;color:white;size:35%;">平均工资与人均消费支出</button></a> </br></br>
+<a href="/house_prices"><button style="letter-spacing:2px;background-color:#6495ED;color:white;size:35%;">住宅商品房平均房价</button></a> </br></br>
+<a href="/unemployment"><button style="letter-spacing:2px;background-color:#6495ED;color:white;size:35%;">失业率</button></a> </br></br>
+</div>
+
+<div2 class="box">
+<h2>{{ the_title }}</h2>
+<div3>
+<a href="/house_prices"><button>2009-2019</button></a>
+<a href="/house_prices1"><button>2009-2011</button></a>
+<a href="/house_prices2"><button>2012-2014</button></a>
+<a href="/house_prices3"><button>2015-2018</button></a>
+</div3>
+</br>
+{{ the_plot_all|safe }}
+</br>
+<p style="text-indent:2em;">现代结婚最重要的设施就是房子，也是现代年轻人压力的重要来源。那么近10年来36个主要城市的房价走势和未来的
+</br>趋势会怎样呢？由图表可知，前7年大多数城市的房价上升趋势比较缓和。但自2016开始大多数地区房价出现暴涨，主要
+</br>在于2015年底国务院出台去库存政策刺激房地产，房价就在深圳等一线城市出现疯涨的行情，楼市“四小龙”南京、合肥、
+</br>厦门、苏州接棒领衔，其它一、二线热点城市纷纷轮番上涨。同时可以发现2018年房价上涨稍微放缓，预测未来几年房
+</br>价依旧会上涨，但是涨幅会缩小。</p>
+<p>近10年房价涨幅比较低的城市有银川、南宁、兰州、西宁、长春。</p>
+</br>
+{{ the_res|safe }}
+</div2>
+{% endblock %}

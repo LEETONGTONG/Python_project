@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="paragraph">
+<a href="/entry"><button style="letter-spacing:2px;background-color:#6495ED;color:white;size:35%;">首页</button></a> </br></br>
+<a href="/density"><button style="letter-spacing:2px;background-color:#6495ED;color:white;size:35%;">人口密度</button></a> </br></br>
+<a href="/consumption"><button style="letter-spacing:2px;background-color:#6495ED;color:white;size:35%;">平均工资与人均消费支出</button></a> </br></br>
+<a href="/house_prices"><button style="letter-spacing:2px;background-color:#6495ED;color:white;size:35%;">住宅商品房平均房价</button></a> </br></br>
+<a href="/unemployment"><button style="letter-spacing:2px;background-color:#6495ED;color:white;size:35%;">失业率</button></a> </br></br>
+</div>
+
+<div2 class="box">
+<h2>{{ the_title }}</h2>
+</br>
+{{ the_plot_all|safe }}
+<p style="text-indent:2em;">人口密度越大，代表该地人口越多。人口越多通常意味着该地的人口职业竞争可能会相对较激烈，那么该地的劳动力人口
+</br>的压力可能也会随之较大。通过按照25%的比例递增，将中国36个主要城市（大中城市）的人口密度分为了四个层次。其中，
+</br>一线城市上海、广州和深圳的人口密度不出所料地排在了前75%（前9位），但北京却位于第11名,那是否意味着北京比其余
+</br>三个一线城市失业率更高、工资水平更低、消费压力更大等而导致人口流失？同时在前75%中，除一线城市和厦门外，剩余的
+</br>郑州、南京、武汉、成都、西安都属于今年的新一线城市，可以发现，新一线城市成为了很多人生活和奋斗上的选择。</p>
+<p>前五名：上海、深圳、厦门、广州、郑州 </p>
+<p>后五名：银川、哈尔滨、乌鲁木齐、呼和浩特、拉萨</p>
+</br>
+{{ the_res|safe }}
+</div2>
+{% endblock %}

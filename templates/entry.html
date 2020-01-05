@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div3 class="juzhong">
+<h2>{{ the_title }}</h2>
+<p style="text-indent:2em;">本项目从人口密度、人均消费支出、平均薪资、住宅商品房房价和失业率五个维度探索了我国36个主要城市的生活压力。
+</br>通过对2018年36个城市的六个维度进行了排名的总和计算，排名总和与生活压力成反比关系，即总和越高的城市，其居民的生活压力越低。
+</br>在大多数人都渴望能够立足的一线城市中，除了失业率外，一线城市的每一维度基本都位于前列。那么从排名总和来看，一线城市中生活压
+</br>力较低的是北京，最高的是上海。除住宅商品房房价外，北京在其余方面基本都优于其他一线城市。那么与人口流入收紧、就业竞争激烈的
+</br>一线城市相比，其余的32个主要城市的排名总和又是怎样的呢？在二线城市中，兰州的生活压力是最低的，除平均薪资外，其余5个方面都
+</br>位居前8名。而作为非一线城市和新一线城市的厦门的生活压力却是最高的，甚至是所有城市中最高的。虽然厦门生活压力如此大，但仍有许
+</br>多人选择生活在厦门，或许厦门留有令人心动的方面？在三线城市中西宁的生活压力是最低的，海口是最高的（缺乏拉萨的完整数据）。</p>
+</br>
+<div>
+	<select autofocus method='POST' onchange="window.location=this.value;">
+		<option value="/entry">-六个维度数据交互图-</option>
+		<option value="/density">人口密度</option>
+		<option value="/consumption">人均消费支出与平均薪资</option>
+		<option value="/house_prices">住宅商品房平均房价</option>
+		<option value="/unemployment">失业率</option>
+	</select>
+</div>
+</br>
+{{ the_plot_all|safe }}
+
+</br>
+{{ the_res|safe }}
+</div3>
+{% endblock %}

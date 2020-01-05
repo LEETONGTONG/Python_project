@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="paragraph">
+<a href="/entry"><button style="letter-spacing:2px;background-color:#6495ED;color:white;size:35%;">首页</button></a> </br></br>
+<a href="/density"><button style="letter-spacing:2px;background-color:#6495ED;color:white;size:35%;">人口密度</button></a> </br></br>
+<a href="/consumption"><button style="letter-spacing:2px;background-color:#6495ED;color:white;size:35%;">平均工资与人均消费支出</button></a> </br></br>
+<a href="/house_prices"><button style="letter-spacing:2px;background-color:#6495ED;color:white;size:35%;">住宅商品房平均房价</button></a> </br></br>
+<a href="/unemployment"><button style="letter-spacing:2px;background-color:#6495ED;color:white;size:35%;">失业率</button></a> </br></br>
+</div>
+
+<div2 class="box">
+	
+	<h2>{{ the_title }}</h2>
+	</br>
+	{{ the_plot_all1|safe }}
+    <p style="text-indent:2em;">由图中可看出，两条折线的运动趋势相似，由此可以判断出消费支出与薪酬呈显性的正比关系，也就是说薪酬越高的城市，
+	</br>其消费支出也会相应越高。其中，有趣的发现是，位于偏远地区的拉萨，人们平均工资达到每年12.6936万元,仅次于北京和上
+	</br>海，位居第3。并且，从已知的平均工资的数据来看，拉萨的人均消费支出在36个主要城市中是最低的。由此可以判断出，在36
+	</br>个主要城市中，拉萨居民在财力上的压力是最小的。</p>
+	</br>
+	{{ the_plot_all2|safe }}
+    <p style="text-indent:2em;">由平均工资和消费支出关系图可以看出，人均消费支出中最突出的是北京、上海和深圳，基本达到4万左右。那么从平均
+	</br>工资减去人均消费支出后所剩的储蓄即差值来看，在36个城市中北京、上海的人均的基本储蓄是比较高的，基本可以达到10
+	</br>万左右，而相对北京和上海来说的深圳人均的基本储蓄比较低，为7万1千多。由此大致可知，在一线城市中，深圳的居民消费
+	</br>压力是最大的。并且从差值图中也能直观地看出，在36个城市中，呼和浩特的居民消费压力是最大的。36个主要城市中人均
+	</br>消费支出的平均值是25079，呼和浩特的人均消费支出是低于平均值的，那么呼和浩特人均的基本储蓄最低主要原因在于当地
+	</br>居民的平均工资比较低，其平均工资是36个主要城市中的最低的，呼和浩特人口密度小原因之一或许也正是因为呼和浩特低工资。</p>
+    <p>前五名：拉萨、北京、上海、广州、南京</p>
+	<p>五名：呼和浩特、厦门、哈尔滨、海口、乌鲁木齐</p>
+	</br>
+	{{ the_res|safe }}
+	
+</div2>
+{% endblock %}
